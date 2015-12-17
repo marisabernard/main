@@ -23,7 +23,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(multer());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(favicon(__dirname + '/public/images/favicon.ico')); 
-app.set('superSecret', config.secret); // secret variable
+app.set('superSecret', 'marisabernard'); // secret variable
 
 // ROUTES CONFIGURATION  ====================================================================
 require('./routes.js')(app);
