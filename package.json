@@ -1,0 +1,18 @@
+{
+  "name": "marisabernard",
+  "version": "0.0.0",
+  "description": "marisabernard site",
+  "main": "server.js",
+  "scripts": {
+    "test": "server-test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marisabernard/marisabernard.git"
+  },
+  "author": "Marisa Bernard",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/marisabernard/marisabernard/issues"
+  }
+}
