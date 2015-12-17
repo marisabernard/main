@@ -30,7 +30,7 @@ require('./routes.js')(app);
 
 // SERVER INITIALIZATION =============================================================
 app.listen(80, function() {
-  var host = localhost;
+  var host = "localhost";
   var port = 80;
   console.log('Example app listening at http://%s:%s', host, port);
 });
