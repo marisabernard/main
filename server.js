@@ -26,7 +26,7 @@ app.use(favicon(__dirname + '/public/images/favicon.ico'));
 app.set('superSecret', config.secret); // secret variable
 
 // ROUTES CONFIGURATION  ====================================================================
-require('./routes.js');
+require('./routes.js')(app);
 
 // SERVER INITIALIZATION =============================================================
 app.listen(80, function() {
