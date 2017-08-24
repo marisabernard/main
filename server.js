@@ -8,6 +8,7 @@ var session 		= require('express-session');
 var multer 			= require('multer');
 var ejs 			= require('ejs');
 var favicon         = require('serve-favicon');
+var port            = process.env.PORT || 3000;
 var http            = require('http');
 var fs              = require('fs');
 var html            = fs.readFileSync('index.html');
@@ -60,22 +61,11 @@ if (req.method === 'POST') {
 */
 
 // Listen on port 3000, IP defaults to 127.0.0.1
-//server.listen(port);
+server.listen(port);
 
 // Put a friendly message on the terminal
-//console.log('Server running at http://127.0.0.1:' + port + '/');
+console.log('Server running at http://127.0.0.1:' + port + '/');
 
-
-
-
-
-// ROUTES CONFIGURATION  ====================================================================
-require('./routes.js')(app);
-
-// SERVER INITIALIZATION =============================================================
-app.listen(80, function() {
-  console.log('app running');
-});
 
 
 
