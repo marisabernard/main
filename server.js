@@ -14,25 +14,25 @@ var fs              = require('fs');
 var html            = fs.readFileSync('index.html');
 
 var log = function(entry) {
-fs.appendFileSync('/tmp/sample-app.log', new Date().toISOString() + ' - ' + entry + '\n');
+fs.serverendFileSync('/tmp/sample-server.log', new Date().toISOString() + ' - ' + entry + '\n');
 };
 
 
 
-// APP CONFIGURATION ==================================================================
-var app = express();
-app.set('views', path.join(__dirname, 'public','views'));
-app.engine('html', ejs.renderFile);
-app.set('view engine', 'html');
-app.use(logger('dev'));
-app.use(methodOverride());
-app.use(session({ resave: true, saveUninitialized: true, secret: 'marisabernard' }));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(multer());
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(favicon(__dirname + '/public/images/favicon.ico')); 
-app.set('superSecret', 'marisabernard'); 
+// SERVER CONFIGURATION ==================================================================
+var server = express();
+server.set('views', path.join(__dirname, 'public','views'));
+server.engine('html', ejs.renderFile);
+server.set('view engine', 'html');
+server.use(logger('dev'));
+server.use(methodOverride());
+server.use(session({ resave: true, saveUninitialized: true, secret: 'marisabernard' }));
+server.use(bodyParser.json());
+server.use(bodyParser.urlencoded({ extended: true }));
+server.use(multer());
+server.use(express.static(path.join(__dirname, 'public')));
+server.use(favicon(__dirname + '/public/images/favicon.ico')); 
+server.set('superSecret', 'marisabernard'); 
 
 /*var server = http.createServer(function (req, res) {
 if (req.method === 'POST') {
