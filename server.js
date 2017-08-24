@@ -16,14 +16,7 @@ var html            = fs.readFileSync('index.html');
 var log = function(entry) {
 fs.serverendFileSync('/tmp/sample-server.log', new Date().toISOString() + ' - ' + entry + '\n');
 };
-
-var server = express();
-
-server.get('/', function (req, res) {
-  res.send('Hello World!')
-})
-
-/*var server = http.createServer(function (req, res) {
+var server = http.createServer(function (req, res) {
 if (req.method === 'POST') {
     var body = '';
 
@@ -47,13 +40,13 @@ if (req.method === 'POST') {
     res.end();
 }
 });
-*/
+
 
 // Listen on port 3000, IP defaults to 127.0.0.1
-//server.listen(port);
+server.listen(port);
 
 // Put a friendly message on the terminal
-//console.log('Server running at http://127.0.0.1:' + port + '/');
+console.log('Server running at http://127.0.0.1:' + port + '/');
 
 
 
