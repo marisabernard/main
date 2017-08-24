@@ -67,7 +67,7 @@ if (req.method === 'POST') {
 
 
 // ROUTES CONFIGURATION  ====================================================================
-//require('./routes.js')(app);
+require('./routes.js')(app);
 
 // SERVER INITIALIZATION =============================================================
 app.listen(port, function() {
