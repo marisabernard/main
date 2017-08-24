@@ -1,12 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var Show = (function () {
-    function Show(id, title, assignedTo, description, percentageComplete) {
+    function Show(id, title) {
         this._id = id;
         this.title = title;
-        this.assignedTo = assignedTo;
-        this.description = description;
-        this.percentageComplete = percentageComplete;
     }
     return Show;
 }());

@@ -22,7 +22,7 @@ var ShowService = (function () {
         var _this = this;
         var headers = new http_1.Headers();
         headers.append('Content-Type', 'application/json');
-        var newShow = new show_entity_1.Show("0", 'New Show', 'Nobody', 'Enter show description here', 0);
+        var newShow = new show_entity_1.Show("0", 'New Show');
         this.http
             .post('http://localhost:8091/api/show', JSON.stringify(newShow), headers)
             .map(function (res) { return res.json(); })

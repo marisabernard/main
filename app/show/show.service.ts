@@ -15,7 +15,7 @@ export class ShowService {
 		var headers = new Headers();
 		headers.append('Content-Type', 'application/json');
     
-    var newShow = new Show("0", 'New Show', 'Nobody', 'Enter show description here', 0);
+    var newShow = new Show("0", 'New Show');
 		
 		this.http
 			.post('http://localhost:8091/api/show', JSON.stringify(newShow), headers)

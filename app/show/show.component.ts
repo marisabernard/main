@@ -21,20 +21,15 @@ export class ShowComponent implements OnInit, AfterViewChecked {
   // Fake Shows DB
   private db: Show[] = [
     new Show(
-      '1', 'Missing Exception', 'John Smith',
-      'Method XYZ should throw exception in case ABC', 0),
+      '1', 'Show Title 1'),
     new Show(
-      '2', 'Log errors', 'John Smith',
-      'Logs need to be persisted to a local file', 24),
+      '2', 'Show Title 2'),
     new Show(
-      '3', 'Update AngularJS', 'John Smith',
-      'Need to update the App to AngularJS version 1.5', 0),
+      '3', 'Show Title 3'),
     new Show(
-      '4', 'Border is missing', 'Jane Doe',
-      'The element div.demo has no border defined', 100),
+      '4', 'Show Title 4'),
     new Show(
-      '5', 'Introduce responsive grid', 'Jane Doe',
-      'Implement reponsive grid for better displays on mobile devices', 17)
+      '5', 'Show Title 5')
   ];
 
     constructor(private showService: ShowService, private backend: MockBackend){

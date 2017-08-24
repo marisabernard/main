@@ -1,15 +1,9 @@
 export class Show {
     public _id: string;
     public title: string;
-    public assignedTo: string;
-    public description: string;
-    public percentageComplete: number;
   
-    constructor(id: string, title: string, assignedTo: string, description: string, percentageComplete: number) {
+    constructor(id: string, title: string) {
       this._id = id;
       this.title = title;
-      this.assignedTo = assignedTo;
-      this.description = description;
-      this.percentageComplete = percentageComplete;
     }
   }

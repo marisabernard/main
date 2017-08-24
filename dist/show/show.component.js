@@ -21,11 +21,11 @@ var ShowComponent = (function () {
         this.backend = backend;
         // Fake Shows DB
         this.db = [
-            new show_entity_1.Show('1', 'Missing Exception', 'John Smith', 'Method XYZ should throw exception in case ABC', 0),
-            new show_entity_1.Show('2', 'Log errors', 'John Smith', 'Logs need to be persisted to a local file', 24),
-            new show_entity_1.Show('3', 'Update AngularJS', 'John Smith', 'Need to update the App to AngularJS version 1.5', 0),
-            new show_entity_1.Show('4', 'Border is missing', 'Jane Doe', 'The element div.demo has no border defined', 100),
-            new show_entity_1.Show('5', 'Introduce responsive grid', 'Jane Doe', 'Implement reponsive grid for better displays on mobile devices', 17)
+            new show_entity_1.Show('1', 'Show Title 1'),
+            new show_entity_1.Show('2', 'Show Title 2'),
+            new show_entity_1.Show('3', 'Show Title 3'),
+            new show_entity_1.Show('4', 'Show Title 4'),
+            new show_entity_1.Show('5', 'Show Title 5')
         ];
         this.backend.connections.subscribe(function (c) {
             var singleShowMatcher = /\/api\/show\/([0-9]+)/i;
