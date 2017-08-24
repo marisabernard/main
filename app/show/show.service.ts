@@ -18,7 +18,7 @@ export class ShowService {
     var newShow = new Show("0", 'New Show', 'Nobody', 'Enter show description here', 0);
 		
 		this.http
-			.post('http://localhost:8080/api/show', JSON.stringify(newShow), headers)
+			.post('http://localhost:8091/api/show', JSON.stringify(newShow), headers)
 			.map(res => res.json())
 			.subscribe(
 				data => this.shows.push(data),
@@ -32,7 +32,7 @@ export class ShowService {
 		headers.append('Content-Type', 'application/json');
 		
 		this.http
-			.post('http://localhost:8080/api/show', JSON.stringify(show), headers)
+			.post('http://localhost:8091/api/show', JSON.stringify(show), headers)
 			.map(res => res.json())
 			.subscribe(
 				null,
@@ -43,7 +43,7 @@ export class ShowService {
 	
 	deleteShow(show: Show) {
 		this.http
-			.delete('http://localhost:8080/api/show/' + show._id)
+			.delete('http://localhost:8091/api/show/' + show._id)
 			.map(res => res.text())
 			.subscribe(
 				data => { 
@@ -64,7 +64,7 @@ export class ShowService {
 	
 	loadAllShows() {
 		this.http
-			.get('http://localhost:8080/api/show')
+			.get('http://localhost:8091/api/show')
 			.map(res => {
         return res.json()
       })
@@ -79,7 +79,7 @@ export class ShowService {
 
   loadShowById(id) {
     this.http
-      .get('http://localhost:8080/api/show/' + id)
+      .get('http://localhost:8091/api/show/' + id)
       .map(res => res.json())
       .subscribe(
         data => this.shows = [data],
@@ -90,5 +90,10 @@ export class ShowService {
 	
 	logError(err) {
 		console.error('There was an error: ' + err);
+	}
+
+	loadShows(){
+		return this.http.get('http://localhost:8091/api/show')
+		.map(res => res.json());
 	}
 }

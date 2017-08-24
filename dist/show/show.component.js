@@ -31,7 +31,7 @@ var ShowComponent = (function () {
             var singleShowMatcher = /\/api\/show\/([0-9]+)/i;
             // return all shows
             // GET: /show
-            if (c.request.url === "http://localhost:8080/api/show" && c.request.method === 0) {
+            if (c.request.url === "http://localhost:8091/api/show" && c.request.method === 0) {
                 var res = new http_1.Response(new http_1.ResponseOptions({
                     body: JSON.stringify(_this.db)
                 }));
@@ -45,7 +45,7 @@ var ShowComponent = (function () {
                     body: JSON.stringify(matches[0])
                 })));
             }
-            else if (c.request.url === 'http://localhost:8080/api/show' && c.request.method === 1) {
+            else if (c.request.url === 'http://localhost:8091/api/show' && c.request.method === 1) {
                 var newShow_1 = JSON.parse(c.request._body);
                 var existingShow = _this.db.filter(function (show) { return show._id == newShow_1._id; });
                 if (existingShow && existingShow.length === 1) {
@@ -77,7 +77,7 @@ var ShowComponent = (function () {
     ShowComponent.prototype.ngOnInit = function () {
         //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
         //Add 'implements OnInit' to the class.
-        //this.showService.loadAllShows();
+        this.showService.loadAllShows();
     };
     ShowComponent.prototype.ngAfterViewChecked = function () {
         //Called after every check of the component's view. Applies to components only.
@@ -88,7 +88,7 @@ var ShowComponent = (function () {
 __decorate([
     core_1.Input('show'),
     __metadata("design:type", show_entity_1.Show)
-], ShowComponent.prototype, "ticket", void 0);
+], ShowComponent.prototype, "show", void 0);
 ShowComponent = __decorate([
     core_1.Component({
         selector: 'app-show',

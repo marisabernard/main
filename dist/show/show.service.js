@@ -24,7 +24,7 @@ var ShowService = (function () {
         headers.append('Content-Type', 'application/json');
         var newShow = new show_entity_1.Show("0", 'New Show', 'Nobody', 'Enter show description here', 0);
         this.http
-            .post('http://localhost:8080/api/show', JSON.stringify(newShow), headers)
+            .post('http://localhost:8091/api/show', JSON.stringify(newShow), headers)
             .map(function (res) { return res.json(); })
             .subscribe(function (data) { return _this.shows.push(data); }, function (err) { return _this.logError(err); }, function () { return console.log('Updated Show'); });
     };
@@ -33,14 +33,14 @@ var ShowService = (function () {
         var headers = new http_1.Headers();
         headers.append('Content-Type', 'application/json');
         this.http
-            .post('http://localhost:8080/api/show', JSON.stringify(show), headers)
+            .post('http://localhost:8091/api/show', JSON.stringify(show), headers)
             .map(function (res) { return res.json(); })
             .subscribe(null, function (err) { return _this.logError(err); }, function () { return console.log('Updated Show'); });
     };
     ShowService.prototype.deleteShow = function (show) {
         var _this = this;
         this.http
-            .delete('http://localhost:8080/api/show/' + show._id)
+            .delete('http://localhost:8091/api/show/' + show._id)
             .map(function (res) { return res.text(); })
             .subscribe(function (data) {
             var midx = -1;
@@ -55,7 +55,7 @@ var ShowService = (function () {
     ShowService.prototype.loadAllShows = function () {
         var _this = this;
         this.http
-            .get('http://localhost:8080/api/show')
+            .get('http://localhost:8091/api/show')
             .map(function (res) {
             return res.json();
         })
@@ -66,12 +66,16 @@ var ShowService = (function () {
     ShowService.prototype.loadShowById = function (id) {
         var _this = this;
         this.http
-            .get('http://localhost:8080/api/show/' + id)
+            .get('http://localhost:8091/api/show/' + id)
             .map(function (res) { return res.json(); })
             .subscribe(function (data) { return _this.shows = [data]; }, function (err) { return _this.logError(err); }, function () { return console.log("Loaded show with id " + id); });
     };
     ShowService.prototype.logError = function (err) {
         console.error('There was an error: ' + err);
+    };
+    ShowService.prototype.loadShows = function () {
+        return this.http.get('http://localhost:8091/api/show')
+            .map(function (res) { return res.json(); });
     };
     return ShowService;
 }());

@@ -16,7 +16,7 @@ declare let _: any;
 })
 
 export class ShowComponent implements OnInit, AfterViewChecked {
-    @Input('show') ticket: Show;
+    @Input('show') show: Show;
    
   // Fake Shows DB
   private db: Show[] = [
@@ -44,7 +44,7 @@ export class ShowComponent implements OnInit, AfterViewChecked {
                   
                   // return all shows
                   // GET: /show
-                  if (c.request.url === "http://localhost:8080/api/show" && c.request.method === 0) {
+                  if (c.request.url === "http://localhost:8091/api/show" && c.request.method === 0) {
                     let res = new Response(new ResponseOptions({
                       body: JSON.stringify(this.db)
                     }));
@@ -64,7 +64,7 @@ export class ShowComponent implements OnInit, AfterViewChecked {
                   }
                   // Add or update a show
                   // POST: /show
-                  else if (c.request.url === 'http://localhost:8080/api/show' && c.request.method === 1) {
+                  else if (c.request.url === 'http://localhost:8091/api/show' && c.request.method === 1) {
                     let newShow: Show = JSON.parse(c.request._body);
                     
                     let existingShow = this.db.filter( (show: Show) => { return show._id == newShow._id});
@@ -105,7 +105,7 @@ export class ShowComponent implements OnInit, AfterViewChecked {
     ngOnInit() {
         //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
         //Add 'implements OnInit' to the class.
-        //this.showService.loadAllShows();
+        this.showService.loadAllShows();
         
     }
 
@@ -114,4 +114,5 @@ export class ShowComponent implements OnInit, AfterViewChecked {
         //Add 'implements AfterViewChecked' to the class.
         
     }
+
 }

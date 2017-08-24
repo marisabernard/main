@@ -9,33 +9,34 @@ var multer 			= require('multer');
 var upload          = multer({ dest: './uploads' });
 var ejs 			= require('ejs');
 var favicon         = require('serve-favicon');
-var port            = process.env.PORT || 3000;
+var port            = process.env.PORT || 8091;
 var http            = require('http');
 
 // SERVER CONFIGURATION ==================================================================
 var server = express();
-server.set('views', path.join(__dirname, 'dist'));
-server.engine('html', ejs.renderFile);
-server.set('view engine', 'html');
 server.use(logger('dev'));
 server.use(methodOverride());
 server.use(session({ resave: true, saveUninitialized: true, secret: 'marisabernard' }));
 server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({ extended: true }));
-server.use(express.static(path.join(__dirname, 'dist')));
 server.set('superSecret', 'marisabernard'); 
 
-// ROUTES CONFIGURATION  ====================================================================
-require('./api.js')(server);
-require('./routes.js')(server);
+// API CONFIGURATION  ====================================================================
+server.get('/api', function(req, res){
+  res.send("API!!");
+});
+
+server.get('/api/show', function(req, res){
+  res.send([{
+    "_id": "ID1",
+    "title" :"TITLE1",
+    "assignedTo": "ASSIGNEDTO1",
+    "description": "DESCRIPTION1",
+    "percentageComplete": 1
+  }]);
+});
 
 // SERVER INITIALIZATION =============================================================
 server.listen(port, function() {
   console.log('Server running at http://127.0.0.1:' + port + '/');
 });
-
-
-
-
-
-
