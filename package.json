@@ -16,20 +16,14 @@
     "url": "https://github.com/marisabernard/marisabernard/issues"
   },
   "dependencies":{
-    "express": "4.12.x",
-    "ejs": "latest",
-    "body-parser": "^1.5.2",
-    "errorhandler": "^1.1.1",
-    "express-session": "^1.7.2",
-    "method-override": "^2.1.2",
-    "morgan": "^1.2.2",
-    "multer": "^0.1.3",
-    "serve-favicon": "^2.0.1",
-    "angular":"latest",
-    "angular-route":"latest",
-    "ngstorage":"latest",
-    "angular-ui-bootstrap":"latest",
-    "angular-sweetalert":"latest",
-    "sweetalert":"latest"
+    "express": "*",
+    "ejs": "*",
+    "body-parser": "*",
+    "errorhandler": "*",
+    "express-session": "*",
+    "method-override": "*",
+    "morgan": "*",
+    "multer": "*",
+    "serve-favicon": "*"
   }
 }

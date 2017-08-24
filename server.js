@@ -17,22 +17,11 @@ var log = function(entry) {
 fs.serverendFileSync('/tmp/sample-server.log', new Date().toISOString() + ' - ' + entry + '\n');
 };
 
-
-
-// SERVER CONFIGURATION ==================================================================
 var server = express();
-server.set('views', path.join(__dirname, 'public','views'));
-server.engine('html', ejs.renderFile);
-server.set('view engine', 'html');
-server.use(logger('dev'));
-server.use(methodOverride());
-server.use(session({ resave: true, saveUninitialized: true, secret: 'marisabernard' }));
-server.use(bodyParser.json());
-server.use(bodyParser.urlencoded({ extended: true }));
-server.use(multer());
-server.use(express.static(path.join(__dirname, 'public')));
-server.use(favicon(__dirname + '/public/images/favicon.ico')); 
-server.set('superSecret', 'marisabernard'); 
+
+server.get('/', function (req, res) {
+  res.send('Hello World!')
+})
 
 /*var server = http.createServer(function (req, res) {
 if (req.method === 'POST') {
@@ -61,10 +50,10 @@ if (req.method === 'POST') {
 */
 
 // Listen on port 3000, IP defaults to 127.0.0.1
-server.listen(port);
+//server.listen(port);
 
 // Put a friendly message on the terminal
-console.log('Server running at http://127.0.0.1:' + port + '/');
+//console.log('Server running at http://127.0.0.1:' + port + '/');
 
 
 
