@@ -1,17 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'my-app',
-  styles: [`
-    
-  `],
-  template: `
-    <div class="jumbotron text-center">
-      <h1>The App Lives!</h1>
-      <p>{{ message }}</p>
-    </div>
-  `
+    selector: 'app-root',
+    templateUrl: './app/app.component.html',
+    styleUrls: ['./app/app.component.css']
 })
-export class AppComponent {
-  message = 'This is the sample message.';
+export class AppComponent{
+    title = "Marisa Bernard's Resume"
 }

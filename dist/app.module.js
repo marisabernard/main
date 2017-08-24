@@ -6,8 +6,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
+var core_1 = require("@angular/core");
+var testing_1 = require("@angular/http/testing");
+var http_1 = require("@angular/http");
+var forms_1 = require("@angular/forms");
+var app_routing_module_1 = require("./app-routing.module");
 var app_component_1 = require("./app.component");
 var AppModule = (function () {
     function AppModule() {
@@ -16,7 +20,16 @@ var AppModule = (function () {
 }());
 AppModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule],
+        providers: [
+            http_1.BaseRequestOptions,
+            testing_1.MockBackend,
+            {
+                provide: http_1.Http,
+                deps: [testing_1.MockBackend, http_1.BaseRequestOptions],
+                useFactory: function (backend, options) { return new http_1.Http(backend, options); }
+            }
+        ],
+        imports: [platform_browser_1.BrowserModule, http_1.HttpModule, forms_1.FormsModule, forms_1.ReactiveFormsModule, app_routing_module_1.AppRoutingModule],
         declarations: [app_component_1.AppComponent],
         bootstrap: [app_component_1.AppComponent]
     })

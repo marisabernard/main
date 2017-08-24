@@ -1,0 +1,32 @@
+<!--<nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">NG2 Showing system</a>
+      </div>
+      <form class="navbar-form navbar-left" name="search-form" role="search">
+        <div class="form-group">
+          <button class="btn btn-default" (click)="service.addNewShow()"><span class="glyphicon glyphicon-plus"> </span> &nbsp; Add new show</button>
+          <button class="btn btn-default" (click)="service.loadAllShows()"><span class="glyphicon glyphicon-download"> </span> &nbsp; Load all shows</button>
+  
+          <input type="text" class="form-control" name="show-to-search" [(ngModel)]="showToSearch" />
+          <button class="btn btn-default" (click)="service.loadShowById(showToSearch)"><span class="glyphicon glyphicon-download"> </span> &nbsp; Load show</button>
+        </div>
+      </form>
+    </div>
+  </nav>
+  <div class="container">
+    <div *ngFor="let show of service.shows">
+      <div class="show panel panel-default" >
+        <div class="panel-body" ng-class="show.percentageComplete == '100' ? 'well' : ''">
+          <button class="btn btn-success" (click)="service.saveShow(show)"><span class="glyphicon glyphicon-save"> </span> &nbsp; Save</button>
+          <button class="btn btn-danger" (click)="service.deleteShow(show)"><span class="glyphicon glyphicon-trash"> </span> &nbsp; Delete</button>
+          <h3>({{show._id}}) <input [(ngModel)]="show.title" /></h3>
+          <span class="assigned-to">Assigned to: <input [(ngModel)]="show.assignedTo" /></span>
+          <span class="percentage-complete">Completed %: <input [(ngModel)]="show.percentageComplete" /></span><br />
+          <textarea [(ngModel)]="show.description" class="description"></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+-->
+<div>SHOW COMPONENT!!!!</div>

@@ -18,16 +18,7 @@
   "bugs": {
     "url": "https://github.com/marisabernard/marisabernard/issues"
   },
-  "dependencies":{
-    "express": "*",
-    "ejs": "*",
-    "body-parser": "*",
-    "errorhandler": "*",
-    "express-session": "*",
-    "method-override": "*",
-    "morgan": "*",
-    "multer": "*",
-    "serve-favicon": "*",
+  "dependencies": {
     "@angular/common": "~4.0.0",
     "@angular/compiler": "~4.0.0",
     "@angular/core": "~4.0.0",
@@ -37,9 +28,19 @@
     "@angular/platform-browser-dynamic": "~4.0.0",
     "@angular/router": "~4.0.0",
     "@angular/upgrade": "~4.0.0",
-    "systemjs": "0.19.40",
+    "@types/node": "^6.0.88",
+    "body-parser": "*",
     "core-js": "^2.4.1",
+    "ejs": "*",
+    "errorhandler": "*",
+    "express": "*",
+    "express-session": "*",
+    "method-override": "*",
+    "morgan": "*",
+    "multer": "*",
     "rxjs": "5.0.1",
+    "serve-favicon": "*",
+    "systemjs": "0.19.40",
     "zone.js": "^0.8.4"
   },
   "devDependencies": {

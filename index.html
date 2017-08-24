@@ -1,32 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <title>My Angular App!</title>
+<html>
 
-    <!-- css -->
-    <!-- load bootstrap and some simple css -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <style>body { padding: 50px 0; }</style>
+  <head>
+    <title>ng2 Showing System</title>
 
-    <!-- js -->
-    <!-- load polyfills and angular dependencies -->
-    <script src="node_modules/core-js/client/shim.min.js"></script>
-    <script src="node_modules/zone.js/dist/zone.js"></script>
-    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <!-- 1. Load libraries -->
+     <!-- Polyfill(s) for older browsers -->
+    <script src="https://unpkg.com/core-js/client/shim.min.js"></script>
 
-    <!-- load our angular app with systemjs -->
-    <script src="node_modules/systemjs/dist/system.src.js"></script>
-    <script src="systemjs.config.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js"></script>
+
+    <script src="https://unpkg.com/zone.js@0.6.25?main=browser"></script>
+    <script src="https://unpkg.com/reflect-metadata@0.1.8"></script>
+    <script src="https://unpkg.com/systemjs@0.19.39/dist/system.src.js"></script>
+
+    <!-- 2. Configure SystemJS -->
+    <script src="system.config.js"></script>
+
+    <!-- 2. Configure SystemJS -->
     <script>
-        System.import('app').catch(function(err) { console.error(err); });
+      System.import('app')
+            .then(null, console.error.bind(console));
     </script>
-</head>
-<body class="container">
-
-    <my-app></my-app>
     
-</body>
+    <meta charset="utf-8">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.6/cerulean/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <base href="/">
+  </head>
+
+  <!-- 3. Display the application -->
+  <body>
+    <div>
+        <ul>
+        <li><a class="active" href="resume">Resume</a></li>
+        <li><a href="show">Show</a></a>
+        </ul>
+    </div>
+    <app-root>Loading ...</app-root>
+  </body>
 </html>
