@@ -14,12 +14,18 @@ var http            = require('http');
 
 // SERVER CONFIGURATION ==================================================================
 var server = express();
+server.set('views', path.join(__dirname, ''));
+server.engine('html', ejs.renderFile);
+server.set('view engine', 'html');
 server.use(logger('dev'));
 server.use(methodOverride());
 server.use(session({ resave: true, saveUninitialized: true, secret: 'marisabernard' }));
 server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({ extended: true }));
+server.use(express.static(path.join(__dirname, '')));
 server.set('superSecret', 'marisabernard'); 
+
+
 
 // API CONFIGURATION  ====================================================================
 server.get('/api', function(req, res){
@@ -34,6 +40,11 @@ server.get('/api/show', function(req, res){
     "description": "DESCRIPTION1",
     "percentageComplete": 1
   }]);
+});
+
+//ROUTES CONFIGURATION ===================================================================
+server.get('*', function(req, res){
+  res.render('index.html');
 });
 
 // SERVER INITIALIZATION =============================================================
