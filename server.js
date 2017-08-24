@@ -8,8 +8,6 @@ var session 		= require('express-session');
 var multer 			= require('multer');
 var ejs 			= require('ejs');
 var favicon         = require('serve-favicon');
-var host            = "localhost";
-var port            = process.env.PORT || 3000;
 var http            = require('http');
 var fs              = require('fs');
 var html            = fs.readFileSync('index.html');
@@ -75,8 +73,8 @@ if (req.method === 'POST') {
 require('./routes.js')(app);
 
 // SERVER INITIALIZATION =============================================================
-app.listen(port, function() {
-  console.log('Example app listening at http://%s:%s', host, port);
+app.listen(80, function() {
+  console.log('app running');
 });
 
 
