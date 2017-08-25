@@ -1,43 +1,100 @@
-
-  html, body {
-    height:100%;
-    min-height:100vh;
-}
-
 .resume-container {
-    width:80%;
-    height: 100%;
-    display:block;
+    width: 70%;
     margin: 0 auto;
-    padding:1%;
+    margin-top: 5%;
+    height: 100%;
 }
 
+.contact-content {
+    width: 100%;
+    margin: 0 auto;
+    background-color: white;
+    height: 300px;
+    box-shadow: 0px 0px 5px #CECECE;
+}
 
-.bio-picture {
-    display:block;
+.contact-picture {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-image {
+    margin-top: 5%;
+    width: 75%;
+}
+
+.contact-info {
+    margin: 0 auto;
+    height: 300px;
+    margin-top: 2%;
+    width: 75%;
+}
+
+.bio-content {
+    margin-top: 5%;
+    height: 200px;
+    background-color: white;
+    box-shadow: 0px 0px 5px #CECECE;
+}
+
+.bio-info {
+    margin: 0 auto;
+    margin-top: 2%;
     width:75%;
-    margin:0 auto;
+    padding-left:10%;
+    padding-right:10%;
 }
 
-.bio-text {
-    display:block;
+.bio-buttons {
     margin:0 auto;
+    margin-top:2%;
+    padding-left:10%;
+    padding-right:10%;
 }
 
-.containerX {
-    padding:1%;
+.button {
+    margin: 0 auto;
+    text-align:center;
+}
+
+.resume-content {
+    margin-top: 5%;
+    height: 150px;
+    background-color: white;
+    height: 650px;
+    margin-bottom: 5%;
+    box-shadow: 0px 0px 5px #CECECE;
+}
+
+.resume-title {
+    margin: 0 auto;
+    margin-top:2%;
+    text-align:center;
+    font-size:35px;
+    font-weight:500;
+}
+
+.resume-info {
+    margin: 0 auto;
+    margin-top: 2%;
+    text-align: center;
+    height: 650px;
 }
 
 .flex-row {
-    padding:1%;
+    border: 0px solid black;
 }
 
 .flex-column {
-    padding:1%;
+    border: 0px solid black;
 }
 
+.name {
+    font-size: 50px;
+    font-weight: 500;
+}
 
-  
-  
-  
-  
+.job-title {
+    font-size: 25px;
+    font-weight: 400;
+}
