@@ -1,15 +1,8 @@
 
-  nav * {
-    float: left;
+  nav {
+    width:100%;
   }
-  
-  nav button {
-    margin-left: 5px;
-  }
-  
-  nav input {
-    margin-left: 20px;
-  }
+ 
   ul {
     list-style-type: none;
     margin: 0;
@@ -32,4 +25,8 @@ li a {
 
 li a:hover {
     background-color: #111;
+}
+
+.container {
+  padding:1%;
 }

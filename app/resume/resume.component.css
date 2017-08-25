@@ -1,0 +1,43 @@
+
+  html, body {
+    height:100%;
+    min-height:100vh;
+}
+
+.resume-container {
+    width:80%;
+    height: 100%;
+    display:block;
+    margin: 0 auto;
+    padding:1%;
+}
+
+
+.bio-picture {
+    display:block;
+    width:75%;
+    margin:0 auto;
+}
+
+.bio-text {
+    display:block;
+    margin:0 auto;
+}
+
+.containerX {
+    padding:1%;
+}
+
+.flex-row {
+    padding:1%;
+}
+
+.flex-column {
+    padding:1%;
+}
+
+
+  
+  
+  
+  

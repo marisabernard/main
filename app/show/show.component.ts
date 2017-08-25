@@ -1,6 +1,8 @@
 import { Component, Input, OnInit, AfterViewChecked } from '@angular/core';
 import {Response, ResponseOptions} from '@angular/http';
 import {MockBackend} from '@angular/http/testing';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/map';
 
 import {Show} from './show.entity';
 

@@ -1,5 +1,6 @@
 import { Component, OnInit, AfterViewChecked } from '@angular/core';
 import { ResumeService } from './resume.service';
+import 'rxjs/add/operator/map'
 
 @Component({
     selector: 'app-resume',
