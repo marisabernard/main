@@ -47,7 +47,6 @@
         "rxjs": "5.0.3",
         "zone.js": "^0.8.4",
         "material-design-icons": "*"
-
     },
     "devDependencies": {
         "@types/jasmine": "2.5.36",
