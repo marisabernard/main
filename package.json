@@ -46,7 +46,8 @@
         "core-js": "^2.4.1",
         "rxjs": "5.0.3",
         "zone.js": "^0.8.4",
-        "material-design-icons": "*"
+        "material-design-icons": "*",
+        "aws-sdk": "*"
     },
     "devDependencies": {
         "@types/jasmine": "2.5.36",
