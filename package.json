@@ -1,16 +1,52 @@
 {
   "name": "marisabernard",
-  "version": "0.1.0",
+  "version": "0.0.0",
+  "license": "MIT",
+  "angular-cli": {},
+  "scripts": {
+    "start": "ng serve",
+    "lint": "tslint \"src/**/*.ts\"",
+    "test": "ng test",
+    "pree2e": "webdriver-manager update",
+    "e2e": "protractor",
+    "build": "ng build && node server.js"
+  },
   "private": true,
   "dependencies": {
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-scripts": "1.0.17"
+    "@angular/common": "^5.1.2",
+    "@angular/compiler": "^5.1.2",
+    "@angular/compiler-cli": "^5.1.2",
+    "@angular/core": "^5.1.2",
+    "@angular/forms": "^5.1.2",
+    "@angular/http": "^5.1.2",
+    "@angular/platform-browser": "^5.1.2",
+    "@angular/platform-browser-dynamic": "^5.1.2",
+    "@angular/router": "^5.1.2",
+    "axios": "*",
+    "body-parser": "*",
+    "core-js": "*",
+    "express": "*",
+    "rxjs": "^5.5.6",
+    "ts-helpers": "*",
+    "zone": "^0.3.4",
+    "zone.js": "^0.8.18"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+  "devDependencies": {
+    "@angular/cli": "*",
+    "@types/jasmine": "*",
+    "@types/node": "*",
+    "codelyzer": "^4.0.2",
+    "jasmine-core": "*",
+    "jasmine-spec-reporter": "*",
+    "karma": "*",
+    "karma-chrome-launcher": "*",
+    "karma-cli": "*",
+    "karma-jasmine": "*",
+    "karma-remap-istanbul": "*",
+    "protractor": "*",
+    "ts-node": "*",
+    "tslint": "^5.8.0",
+    "typescript": "^2.4.2",
+    "webdriver-manager": "*"
   }
 }
