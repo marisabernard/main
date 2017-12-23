@@ -4,3 +4,22 @@
     width:auto;
     border-radius:50%;
 }
+
+.social-icon {
+    width:50px;
+    height:auto;
+    padding-left:5%;
+    padding-right:5%;
+}
+
+.vertical-list li{
+    display:block;
+}
+
+.custom-card {
+    height:250px;
+}
+
+.resume-container {
+    margin-top:2%;
+}
