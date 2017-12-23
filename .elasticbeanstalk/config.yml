@@ -1,8 +1,11 @@
 branch-defaults:
   master:
-    environment: marisabernard-prod
+    environment: Marisabernard-env
     group_suffix: null
 environment-defaults:
+  Marisabernard-env:
+    branch: null
+    repository: null
   marisabernard-dev:
     branch: null
     repository: null
