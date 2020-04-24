@@ -1,6 +1,8 @@
 ---
 applications:
  - name: marisabernard
+   routes:
+   - route: www.marisabernard.com
    memory: 256M
    buildpacks:
       - nodejs_buildpack
