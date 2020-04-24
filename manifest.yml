@@ -2,7 +2,7 @@
 applications:
  - name: marisabernard
    routes:
-   - route: marisabernard.com
+   - route: marisabernard.mybluemix.net
    memory: 256M
    buildpacks:
       - sdk-for-nodejs
