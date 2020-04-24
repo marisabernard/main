@@ -5,4 +5,4 @@ applications:
    - route: www.marisabernard.com
    memory: 256M
    buildpacks:
-      - nodejs_buildpack
+      - sdk-for-nodejs
