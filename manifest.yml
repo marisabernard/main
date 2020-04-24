@@ -1,5 +1,6 @@
 ---
 applications:
- - name: GetStartedNode
-   random-route: true
+ - name: marisabernard
    memory: 256M
+   buildpacks:
+      - nodejs_buildpack

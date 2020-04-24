@@ -1,12 +1,9 @@
 {
-  "name": "get-started-node",
+  "name": "marisabernard",
   "main": "server.js",
   "description": "An introduction to developing Node.js apps on the IBM Cloud platform",
   "version": "0.1.1",
   "private": false,
-  "engines": {
-    "node": "10.*"
-  },
   "scripts": {
     "start": "node server.js"
   },
@@ -23,5 +20,9 @@
     "mongodb": "^3.0.10"
   },
   "author": "IBM Corp",
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "engines": {
+    "node": "8.9.3",
+    "npm": "5.6.0"
+  }
 }
