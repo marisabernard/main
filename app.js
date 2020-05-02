@@ -19,8 +19,18 @@ const express = require('express');
 
 const app = express();
 
-app.get('/', (req, res) => {
-  res.status(200).send('Hello, world!').end();
+app.use(express.static(__dirname + '/dist/client'));
+
+// app.get('/', (req, res) => {
+//   res.status(200).send('Hello, world!').end();
+// });
+
+app.get('/api', function(req, res){
+  res.send('API');
+});
+
+app.get('*', function(req, res){
+  res.sendFile('index.html');
 });
 
 // Start the server
