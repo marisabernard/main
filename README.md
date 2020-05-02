@@ -1,38 +1,27 @@
-# Quickstart for Node.js in the App Engine standard environment
+# PersonalPortfoliAngular
 
-This is the sample application for the
-[Quickstart for Node.js in the App Engine standard environment][tutorial]
-tutorial found in the [Google App Engine Node.js standard environment][appengine]
-documentation.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.2.
 
-* [Setup](#setup)
-* [Running locally](#running-locally)
-* [Deploying to App Engine](#deploying-to-app-engine)
-* [Running the tests](#running-the-tests)
+## Development server
 
-## Setup
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-Before you can run or deploy the sample, you need to do the following:
+## Code scaffolding
 
-1.  Refer to the [appengine/README.md][readme] file for instructions on
-    running and deploying.
-1.  Install dependencies:
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-        npm install
+## Build
 
-## Running locally
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-    npm start
+## Running unit tests
 
-## Deploying to App Engine
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-    gcloud app deploy
+## Running end-to-end tests
 
-## Running the tests
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-See [Contributing][contributing].
+## Further help
 
-[appengine]: https://cloud.google.com/appengine/docs/standard/nodejs
-[tutorial]: https://cloud.google.com/appengine/docs/standard/nodejs/quickstart
-[readme]: ../../README.md
-[contributing]: https://github.com/GoogleCloudPlatform/nodejs-docs-samples/blob/master/CONTRIBUTING.md
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
