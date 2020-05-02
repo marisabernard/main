@@ -14,36 +14,21 @@
 
 'use strict';
 
-var express = require('express');
-var app = express();
-var morgan = require('morgan');
-var bodyParser = require('body-parser');
-var port = process.env.PORT || 3000;
-var methodOverride = require('method-override'); // simulate DELETE and PUT (express4)
-var router = express.Router();
+// [START gae_node_request_example]
+const express = require('express');
 
-/****************************** Router Configuration ***************************/
+const app = express();
 
-app.use(express.static(__dirname + '/dist/client'));
-app.use(bodyParser.urlencoded({extended:true}));
-app.use(bodyParser.json());
-app.use(methodOverride());
-
-/****************************** Routes ***************************/
-
-router.get('/api', function(req, res){
-  res.send('API');
+app.get('/', (req, res) => {
+  res.status(200).send('Hello, world!').end();
 });
 
-router.get('*', function(req, res){
-  res.sendFile('index.html');
-});
-
-app.use('/', router);
-
-app.listen(port, () => {
-  console.log(`App listening on port ${port}`);
+// Start the server
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => {
+  console.log(`App listening on port ${PORT}`);
   console.log('Press Ctrl+C to quit.');
 });
+// [END gae_node_request_example]
 
 module.exports = app;
