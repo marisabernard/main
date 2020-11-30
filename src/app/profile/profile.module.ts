@@ -15,13 +15,16 @@ import { EducationComponent } from './education/education.component';
 // import { ContactComponent } from './contact/contact.component';
 import { NgxSpinnerModule } from '../../../node_modules/ngx-spinner';
 // import { ProjectsComponent } from './projects/projects.component';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
+
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     SnotifyModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    PdfViewerModule
   ],
   declarations: [
     ProfileComponent,

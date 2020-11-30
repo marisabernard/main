@@ -798,7 +798,7 @@ fieldset[disabled]
 
 .has-success:after,
 .has-danger:after {
-  font-family: 'Nucleo Outline';
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
   content: "\ea22";
   display: inline-block;
   position: absolute;
@@ -1084,7 +1084,7 @@ textarea.form-control:focus, textarea.form-control:active {
 }
 
 .checkbox label::after {
-  font-family: 'Nucleo Outline';
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
   content: "\ea22";
   top: 0px;
   text-align: center;
@@ -1344,7 +1344,7 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -1465,8 +1465,8 @@ p {
 
 body {
   color: #2c2c2c;
-  font-size: 14px;
-  font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
@@ -2385,13 +2385,13 @@ img {
           box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
 }
 
-@font-face {
+/* @font-face {
   font-family: 'Nucleo Outline';
   src: url("../fonts/nucleo-outline.eot");
   src: url("../fonts/nucleo-outline.eot") format("embedded-opentype"), url("../fonts/nucleo-outline.woff2") format("woff2"), url("../fonts/nucleo-outline.woff") format("woff"), url("../fonts/nucleo-outline.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
-}
+} */
 
 /*------------------------
 	base class definition
